@@ -31,7 +31,9 @@ namespace Module1_Task.Library
         public LibraryItem.LibraryItem[] SetItems(LibraryItem.LibraryItem value)
         {
 
-            return [.._items, value];
+            _items = [.. _items, value];
+            return _items;
+            
         }
 
 
@@ -42,6 +44,10 @@ namespace Module1_Task.Library
             {
                 Console.WriteLine(item.Name);
             }
+
+            Console.WriteLine();
+
+            _items = items;
         }
     }
 }

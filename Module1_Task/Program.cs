@@ -24,10 +24,11 @@ internal class Program
         {
             Console.WriteLine("Successfully registered \r\n");
 
+            Library library1 = new Library();
+
             while (ended)
             {
 
-                Library library1 = new Library();
 
 
 
@@ -66,7 +67,7 @@ internal class Program
                                 Console.WriteLine("Write the name of the book");
                                 string name = Console.ReadLine();
 
-                                Console.WriteLine("Whne was the book published?");
+                                Console.WriteLine("When was the book published?");
                                 var date = DateTime.Parse(Console.ReadLine());
 
                                 Book book = new Book(author, name, date);
@@ -98,76 +99,7 @@ internal class Program
                     }
 
                 }
-
-
-                //foreach (LibraryItem book in books)
-                //{
-                //    Console.WriteLine(book.Name);
-                //}
-
-
-
-
-
-
-                //    if (choice == 1) { 
-
-
-                //        foreach(LibraryItem book in books)
-                //        {
-                //            Console.WriteLine(book.Name);
-                //        }
-                //    } else if(choice == 2)
-                //    {
-                //        Console.WriteLine("\r\n 1) Journal \r\n 2) Book");
-                //        var bookChoice = int.Parse(Console.ReadLine());
-
-                //if (bookChoice == 1)
-                //{
-                //    Book book = new Book("Rahman Mahammadov", "C# Fundamentals", DateTime.Parse("2024-02-01"));
-
-                //    LibraryItem[] SetBooks = library1.SetItems(book);
-
-
-                //    foreach (LibraryItem newBook in SetBooks)
-                //    {
-                //        Console.WriteLine(newBook.Name);
-                //    }
-
-                //            Console.WriteLine("\r\n  The booklist has been updated? \r\n if You want to view the list, press 2");
-
-
-                //            var viewListAfterAdding = int.Parse(Console.ReadLine());
-
-                //            if(viewListAfterAdding == 2) {
-
-                //                library1.GetItems();
-                //                foreach (LibraryItem kitab in SetBooks)
-                //                {
-                //                    Console.WriteLine(kitab.Name);
-                //                }
-
-
-                //            }
-                //        }
-
-
-                //    }
-                //}
-                //else
-                //{
-                //    Console.WriteLine("Something wrong with your mail or password");
-                //}
-
-
-
-
-
-                Library library = new Library();
-                var items = library.GetItems();
             }
-
-           
         }
     }
 }
